@@ -6,13 +6,13 @@ class Solution:
         #     ans.append(nums[i+n])
         # return ans
         
-        ans = []
-        for i in range(n):
-            ans.extend([nums[i], nums[i+n]])
-        return ans
+        # ans = []
+        # for i in range(n):
+        #     ans.extend([nums[i], nums[i+n]])
+        # return ans
     
-        # res = []
-        # for i, j in zip(nums[0:n],nums[n:]):
-        #     res+=[i,j]
-        # return res                                                                                                      
+        res = []
+        for i, j in zip(nums[0:n],nums[n:]):
+            res+=[i,j]
+        return res                                                                                                      
         
