@@ -1,9 +1,20 @@
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        res= []
-        for i in nums1:
-            for j in nums2:
-                if i == j:
-                    res.append(i)
-        return set(res)
+        d = {}
+        res = []
+        for n in nums1:
+            d[n] = 1
+
+        for n in nums2:
+            # Check if n is in dictionary and not in the result
+            if n in d and d[n]:
+                res.append(n)
+                d[n] -= 1  
+        return res
+        # res= []
+        # for i in nums1:
+        #     for j in nums2:
+        #         if i == j:
+        #             res.append(i)
+        # return set(res)
         
