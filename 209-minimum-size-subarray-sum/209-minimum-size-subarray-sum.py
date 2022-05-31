@@ -5,7 +5,6 @@ class Solution:
         c = None
         for r in range(len(nums)):
             t+=nums[r]
-            
             while t >= target:
                 c = min(c or float('inf'), r+1-l)
                 t-=nums[l]
