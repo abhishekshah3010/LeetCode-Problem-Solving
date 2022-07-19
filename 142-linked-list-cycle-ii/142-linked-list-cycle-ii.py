@@ -18,4 +18,3 @@ class Solution:
             slow = slow.next
             head = head.next
         return head
-        
