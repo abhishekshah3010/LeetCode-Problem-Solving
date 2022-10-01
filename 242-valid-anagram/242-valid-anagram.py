@@ -1,21 +1,22 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        dict_s = {}
-        dict_t = {}
+        dic_s = {}
+        dic_t = {}
         
         for i in s:
-            if not i in dict_s:
-                dict_s[i] = 1
+            if i not in dic_s:
+                dic_s[i] = 1
             else:
-                dict_s[i] += 1
+                dic_s[i] += 1
         
-        for i in t:
-            if not i in dict_t:
-                dict_t[i] = 1
+        for j in t:
+            if j not in dic_t:
+                dic_t[j] = 1
             else:
-                dict_t[i] += 1
+                dic_t[j] += 1
         
-        if dict_s == dict_t:
+        if dic_s == dic_t:
             return True
         else:
             return False
+            
