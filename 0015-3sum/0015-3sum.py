@@ -16,7 +16,7 @@ class Solution:
                     l+=1
                 else:
                     r-=1
-        return list(res)
+        return [list(r) for r in res]
         
         
         
